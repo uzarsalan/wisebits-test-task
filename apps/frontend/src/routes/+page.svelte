@@ -9,8 +9,11 @@
   async function loadMoreClickhandler() {
     await coffeeStore.getNextCoffee();
     setTimeout(() => {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-    }, 150);
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth",
+      });
+    }, 50);
   }
 </script>
 

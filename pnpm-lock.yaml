@@ -111,6 +111,9 @@ importers:
       svelte-french-toast:
         specifier: ^1.2.0
         version: 1.2.0(svelte@4.2.18)
+      svelte-loading-spinners:
+        specifier: ^0.3.6
+        version: 0.3.6
     devDependencies:
       '@fontsource/fira-mono':
         specifier: ^4.5.10
@@ -5599,6 +5602,10 @@ packages:
     dependencies:
       svelte: 4.2.18
     dev: true
+
+  /svelte-loading-spinners@0.3.6:
+    resolution: {integrity: sha512-mthHQ2TwiwzTWzbFry3CBnVEfzqPOD9WkVw84OfSYzHRq6N9wgQ+yv37u81uPeuLU/ZOIPqhujpXquB1aol5ZQ==}
+    dev: false
 
   /svelte-preprocess@5.1.4(postcss@8.4.39)(svelte@4.2.18)(typescript@5.5.3):
     resolution: {integrity: sha512-IvnbQ6D6Ao3Gg6ftiM5tdbR6aAETwjhHV+UKGf5bHGYR69RQvF1ho0JKPcbUON4vy4R7zom13jPjgdOWCQ5hDA==}

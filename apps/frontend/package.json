@@ -26,6 +26,7 @@
 	"type": "module",
 	"dependencies": {
 		"shared-types": "workspace:^",
-		"svelte-french-toast": "^1.2.0"
+		"svelte-french-toast": "^1.2.0",
+		"svelte-loading-spinners": "^0.3.6"
 	}
 }

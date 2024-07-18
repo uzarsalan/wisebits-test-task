@@ -1,11 +1,13 @@
 <script lang="ts">
   import type { CoffeeGetDto } from "shared-types";
-  import Placeholder from "$lib/svg/Placeholder.svelte";
+  import Placeholder from "$lib/components/Placeholder.svelte";
 
   $: isImageLoading = true;
 
-  function onImageLoaded() {
-    isImageLoading = false;
+  async function onImageLoaded() {
+    setTimeout(() => {
+      isImageLoading = false;
+    }, 20);
   }
 
   export let item: CoffeeGetDto;
@@ -19,15 +21,17 @@
       loading="lazy"
       decoding="async"
       on:load={onImageLoaded}
-      class="object-cover group-hover:scale-105 transition duration-500 w-full h-full"
+      class={"object-cover group-hover:scale-105 transition duration-500 w-full h-full transition duration-500 " +
+        (isImageLoading ? "opacity-0 scale-[1.2]" : "opacity-1 scale-[1]")}
       src={item.image.file}
       alt={item.blend_name}
     />
-    {#if isImageLoading}
-      <div class="absolute inset-0">
-        <Placeholder />
-      </div>
-    {/if}
+    <div
+      class={"absolute inset-0 transition duration-500 flex flex-col items-center justify-center " +
+        (isImageLoading ? "opacity-[1]" : "opacity-0")}
+    >
+      <Placeholder />
+    </div>
   </div>
 
   <div class="z-20 absolute top-2 right-2 text-white">{item.intensifier}</div>
