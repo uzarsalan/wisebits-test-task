@@ -16,12 +16,12 @@ const trottler = <T extends () => any>(
   time = 30_000,
   timer?: NodeJS.Timeout
 ) => {
-  const func = () => {
-    fn();
+  const func = async () => {
     clearTimeout(timer);
     timer = setTimeout(() => {
       func();
     }, time);
+    await fn();
   };
   return func;
 };
