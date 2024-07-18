@@ -23,8 +23,10 @@
       src={item.image.file}
       alt={item.blend_name}
     />
-    {#if true}
-      <Placeholder />
+    {#if isImageLoading}
+      <div class="w-full h-full">
+        <Placeholder />
+      </div>
     {/if}
   </div>
 
