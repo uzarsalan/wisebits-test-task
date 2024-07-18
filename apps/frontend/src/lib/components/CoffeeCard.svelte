@@ -24,7 +24,7 @@
       alt={item.blend_name}
     />
     {#if isImageLoading}
-      <div class="w-full h-full">
+      <div class="absolute inset-0">
         <Placeholder />
       </div>
     {/if}
@@ -33,7 +33,7 @@
   <div class="z-20 absolute top-2 right-2 text-white">{item.intensifier}</div>
 
   <div
-    class="z-10 p-2 bg-[linear-gradient(to_top,#000,rgba(0,0,0,0))] group-hover:pt-[200px] text-white pt-4 translate-y-[65px] group-hover:translate-y-0 transition-all duration-500 flex flex-col"
+    class="z-10 p-2 bg-[linear-gradient(to_top,#000,rgba(0,0,0,0))] group-hover:pt-[200px] text-white pt-4 translate-y-[62px] group-hover:translate-y-0 transition-all duration-500 flex flex-col"
   >
     <p class="opacity-0 group-hover:opacity-80 text-sm transition duration-500">
       {item.origin}
